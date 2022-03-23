@@ -4,7 +4,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+
         Cuestionario c = new Cuestionario();
+
         Categoria categorias = new Categoria();
 
         Scanner sc = new Scanner(System.in);
@@ -12,6 +15,9 @@ public class Main {
         String respuesta = sc.nextLine();
         Jugador j = new Jugador(respuesta);
 
+        categorias.agregarCategoria(c);
+        categorias.agregarCategoria(c);
+        categorias.agregarCategoria(c);
         categorias.agregarCategoria(c);
         categorias.agregarCategoria(c);
 
@@ -24,19 +30,22 @@ public class Main {
         c.agregarPregunta(new Pregunta("1 + 1", List.of(
                 new Respuesta("3", false),
                 new Respuesta("2", true),
-                new Respuesta("4", false)
+                new Respuesta("4", false),
+        new Respuesta("5", false)
         )));
         c.agregarPregunta(new Pregunta("¿NetBeans es un lenguaje de programación?", List.of(
                 new Respuesta("Sí", false),
-                new Respuesta("No", true)
+                new Respuesta("No", true),
+        new Respuesta("No lo se", false),
+                new Respuesta("Tal vez", false)
         )));
 
-        c.agregarPregunta(new Pregunta("Lenguajes de programación (¡Miren! alguien dijo el chiste de que HTML no es un lenguaje de programación, ríanse) que sirven para programar en la web del lado del cliente", List.of(
+        c.agregarPregunta(new Pregunta("Lenguajes de programación  que sirven para programar en la web del lado del cliente", List.of(
                 new Respuesta("HTML, CSS y JavaScript", true),
                 new Respuesta("PHP, Python y JavaScript", false),
                 new Respuesta("C y C++", false),
                 new Respuesta("Perl y Kotlin", false),
-                new Respuesta("Go, JavaScript y TypeScript", false)
+
         )));
 
         categorias.preguntarPorCategoria();

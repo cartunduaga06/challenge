@@ -17,21 +17,26 @@ public class Cuestionario {
         this.preguntas.add(p);
     }
 
-    public void preguntar() {
+    public boolean  preguntar() {
         int numero = 1;
+        boolean acierta1 = true;
         for (Pregunta p : this.preguntas) {
             boolean acierta = p.preguntar(numero);
             numero++;
             if (acierta) {
                 System.out.println("Correcto");
                 this.aciertos++;
+               acierta1=true;
             } else {
                 System.out.println("Incorrecto");
                 this.errores++;
                 System.out.println("el juego termina");
+                acierta1=false;
                 break;
             }
+
         }
+     return acierta1;
     }
 
     public void imprimirResultados() {

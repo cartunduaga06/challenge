@@ -13,9 +13,11 @@ public class Categoria {
 
     public void preguntarPorCategoria(){
         for(Cuestionario c: this.categorias){
-            c.preguntar();
+            if(c.preguntar()==false){ c.imprimirResultados(); break;}
 
-            c.imprimirResultados();
+
+            System.out.println("\n muy bien pasas a la siguiente ronda de preguntas");
+            System.out.println("---------------------------------------");
         }
     }
 }
