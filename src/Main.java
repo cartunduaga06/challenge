@@ -5,12 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
         Cuestionario c = new Cuestionario();
+        Categoria categorias = new Categoria();
 
         Scanner sc = new Scanner(System.in);
         System.out.println("ingrese nombre jugador ");
         String respuesta = sc.nextLine();
         Jugador j = new Jugador(respuesta);
 
+        categorias.agregarCategoria(c);
+        categorias.agregarCategoria(c);
 
         c.agregarPregunta(new Pregunta("Lenguaje de programación más fácil de aprender", List.of(
                 new Respuesta("Java", false),
@@ -36,9 +39,9 @@ public class Main {
                 new Respuesta("Go, JavaScript y TypeScript", false)
         )));
 
-        c.preguntar();
+        categorias.preguntarPorCategoria();
         System.out.println(j.getNombre());
-        c.imprimirResultados();
+
 
     }
 }

@@ -28,6 +28,8 @@ public class Cuestionario {
             } else {
                 System.out.println("Incorrecto");
                 this.errores++;
+                System.out.println("el juego termina");
+                break;
             }
         }
     }
