@@ -44,7 +44,7 @@ public class Main {
                 new Respuesta("HTML, CSS y JavaScript", true),
                 new Respuesta("PHP, Python y JavaScript", false),
                 new Respuesta("C y C++", false),
-                new Respuesta("Perl y Kotlin", false),
+                new Respuesta("Perl y Kotlin", false)
 
         )));
 
